@@ -1,0 +1,9 @@
+for (int i=-1; i <= 1; i++) {
+			int row = pos[0] + i;
+			if (row < 0 || row >= IBoard.BOARD_ROWS) { continue; }
+			for (int j=-1; j <= 1; j++) {
+				int col = pos[1] + j;
+				if ((col < 0 || col >= IBoard.BOARD_COLUMNS) || (i == 0 && j == 0)) { continue; }
+				positions[3*(i+1)+j+1] = Character.toLowerCase(board.getCell(row, col));
+			}
+		}
